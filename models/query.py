@@ -54,6 +54,30 @@ def get_all_assignments():
     """
     df = pd.read_sql_query(query_str, conn)
     conn.close()
+    
+    # Cruzar Nombre_Evaluador desde data/evaluators.xlsx sin re-ejecutar el LLM
+    excel_path = os.path.join(PARENT_DIR, "data", "evaluators.xlsx")
+    if os.path.exists(excel_path) and "Id_Evaluador" in df.columns:
+        try:
+            df_eval_excel = pd.read_excel(excel_path)
+            if "Id_Usuario" in df_eval_excel.columns and "Nombre_Evaluador" in df_eval_excel.columns:
+                df_nombres = df_eval_excel[["Id_Usuario", "Nombre_Evaluador"]].drop_duplicates(subset=["Id_Usuario"])
+                df["Id_Evaluador"] = df["Id_Evaluador"].astype(str).str.strip()
+                df_nombres["Id_Usuario"] = df_nombres["Id_Usuario"].astype(str).str.strip()
+                df = df.merge(
+                    df_nombres,
+                    left_on="Id_Evaluador",
+                    right_on="Id_Usuario",
+                    how="left"
+                ).drop(columns=["Id_Usuario"], errors="ignore")
+        except Exception:
+            pass
+
+    if "Nombre_Evaluador" not in df.columns:
+        df["Nombre_Evaluador"] = "Sin registro"
+    else:
+        df["Nombre_Evaluador"] = df["Nombre_Evaluador"].fillna("Sin registro")
+        
     return df
 
 def get_assignment_by_article_id(article_id):

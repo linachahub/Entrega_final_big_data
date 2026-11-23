@@ -110,6 +110,7 @@ app.layout = dbc.Container([
                         {"name": "Id Artículo", "id": "IdArticulo"},
                         {"name": "Título del Artículo", "id": "Titulo_Articulo"},
                         {"name": "Id Evaluador", "id": "Id_Evaluador"},
+                        {"name": "Nombre Evaluador", "id": "Nombre_Evaluador"},
                         {"name": "Área de Interés", "id": "Area_Evaluador"},
                         {"name": "Institución", "id": "Institucion_Evaluador"},
                         {"name": "Similitud Semántica", "id": "Similitud"}
@@ -187,6 +188,7 @@ def update_article_detail(selected_id):
     titulo = rec.get("Titulo_Articulo", rec.get("Título", "Sin título"))
     palabras = rec.get("Palabras_Clave", rec.get("Palabras clave", "No especificadas"))
     id_eval = rec.get("Id_Evaluador", rec.get("Top_Candidate_Id", "N/A"))
+    nombre = rec.get("Nombre_Evaluador", rec.get("Nombre_Evaluador", "Sin registro"))
     institucion = rec.get("Institucion_Evaluador", rec.get("Institución", "No registrada"))
     area = rec.get("Area_Evaluador", rec.get("Area_interés", "Sin área especificada"))
     similitud = rec.get("Similitud", rec.get("Similarity_Score", "N/A"))
@@ -205,6 +207,7 @@ def update_article_detail(selected_id):
             dbc.Row([
                 dbc.Col([
                     html.P([html.Strong("ID Evaluador: "), str(id_eval)]),
+                    html.P([html.Strong("Nombre Evaluador: "), str(nombre)]),
                     html.P([html.Strong("Institución: "), str(institucion)])
                 ], md=6),
                 dbc.Col([

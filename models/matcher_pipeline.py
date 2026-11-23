@@ -116,6 +116,7 @@ df_articles[
 
 df_evaluators[[
     "Id_Usuario",
+    "Nombre",
     "País",
     "Institución",
     "Internacionalización",
