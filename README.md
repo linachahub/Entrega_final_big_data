@@ -84,6 +84,7 @@ Librerías de Python: dash, dash-bootstrap-components, pandas, scikit-learn, ope
 1. Activar el entorno virtual
 PowerShell
 .venv\Scripts\Activate.ps1
+
 2. Generar o actualizar la base de datos (opcional si ya cuentas con editorial_assignments.db)
 PowerShell
 python models\matcher_pipeline.py
