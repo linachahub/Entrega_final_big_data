@@ -37,7 +37,7 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
   - **Detalle & Dictamen LLM:** inspección individual por artículo con metadatos, datos del evaluador seleccionado y justificación generada por el LLM.
   - **Consola SQLite Interactiva:** ejecución de consultas SQL directas sobre la base de datos de asignaciones.
 
-## 3. Arquitectura Medallion Implementada
+## 3. Arquitectura Medallion
 - **Capa Bronze:** archivos originales de entrada (`data/summary.xlsx` con títulos, palabras clave y resúmenes; `data/evaluators.xlsx` con la caracterización de evaluadores).
 - **Capa Silver:** limpieza y estandarización de texto, construcción de descripciones enriquecidas, generación de embeddings con **`nomic-embed-text`** en Ollama y evaluación/re-ranking con **`mistral`** (`models/matcher_pipeline.py` / `matcher.py`).
 - **Capa Gold:** Interfaz web (`models/app.py`): ver el tablero en `http://127.0.0.1:8050/`.
