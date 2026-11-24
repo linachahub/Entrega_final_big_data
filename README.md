@@ -90,7 +90,7 @@ Librerías de Python: dash, dash-bootstrap-components, pandas, scikit-learn, ope
 
 
 ## Instalación y ejecución
-1. Activar el entorno virtual
+1. Activar el entorno virtual en Visual Studio Code
 PowerShell
 .venv\Scripts\Activate.ps1
 
