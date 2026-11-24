@@ -5,7 +5,7 @@
 - Janneth Leal Lozano
 - Flor Enid Taparcúa Cardona
 - Carlos Andrés Vahos Gil
-- 
+  
 # Optimización de la Selección de Revisores por Pares
 
 Aplicación interactiva desarrollada en **Dash** y **Python** para apoyar la asignación de pares evaluadores a artículos científicos mediante similitud semántica entre áreas de interés y temática del artículo, asistido por modelos locales de lenguaje (**Ollama**).
