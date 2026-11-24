@@ -69,7 +69,7 @@ Entrega_final_big_data/
 └── README.md
 
 
-## **Requisitos previos**
+# Requisitos previos
 Python 3.13 y entorno virtual (.venv).
 
 Ollama instalado y en ejecución en el equipo local, con los modelos descargados:
@@ -80,7 +80,7 @@ ollama pull mistral
 Librerías de Python: dash, dash-bootstrap-components, pandas, scikit-learn, openpyxl, ollama.
 
 
-Instalación y ejecución
+## Instalación y ejecución
 1. Activar el entorno virtual
 PowerShell
 .venv\Scripts\Activate.ps1
