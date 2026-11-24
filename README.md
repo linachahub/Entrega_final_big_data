@@ -98,6 +98,6 @@ Abre en el navegador la dirección:
 Plaintext
 [http://127.0.0.1:8050/](http://127.0.0.1:8050/)
 
-![Tabla General de Asignaciones](Imagen_1.png)
-![Tabla General de Asignaciones](Imagen_2.png)
-![Tabla General de Asignaciones](Imagen_3.png)
+img/Imagen_1.png
+img/Imagen_2.png
+img/Imagen_3.png
