@@ -60,12 +60,22 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
   * `data/`
     * `summary.xlsx`
     * `evaluators.xlsx`
+  * `img/`
+    * `Imagen_1.png`
+    * `Imagen_2.png`
+    * `Imagen_3.png`
   * `models/`
     * `app.py`
     * `query.py`
     * `matcher_pipeline.py`
-    * `editorial_assignments.db`
+  * `src/`
+  * `.python-version`
   * `README.md`
+  * `asignaciones_finales.xlsx`
+  * `editorial_assignments.db`
+  * `pyproject.toml`
+  * `requirements.txt`
+  * `uv.lock`
 
 
 # Requisitos previos
