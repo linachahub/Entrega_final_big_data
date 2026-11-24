@@ -1,6 +1,12 @@
 # Entrega_final_big_data
 # Optimización de la Selección de Revisores por Pares
 
+# Equipo de trabajo
+Lina Marcela Patiño Olarte
+Janneth Leal Lozano
+Flor Enid Taparcúa Cardona
+Carlos Andrés Vahos Gi
+
 Aplicación interactiva desarrollada en **Dash** y **Python** para apoyar la asignación de pares evaluadores a artículos científicos mediante similitud semántica entre áreas de interés y temática del artículo, asistido por modelos locales de lenguaje (**Ollama**).
 
 ## 1. Caso de Uso
