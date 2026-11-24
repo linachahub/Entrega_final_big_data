@@ -42,7 +42,7 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
 - **Capa Silver:** limpieza y estandarización de texto, construcción de descripciones enriquecidas, generación de embeddings con **`nomic-embed-text`** en Ollama y evaluación/re-ranking con **`mistral`** (`models/matcher_pipeline.py` / `matcher.py`).
 - **Capa Gold:** Interfaz web (`models/app.py`): ver el tablero en `http://127.0.0.1:8050/`.
 
-## Arquitectura y flujo de datos
+## Flujo de datos
 
 1. **Fuentes de entrada (`data/`):**
    - `data/summary.xlsx`: artículos candidatos a evaluación (título, palabras clave, etc.).
