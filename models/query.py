@@ -80,10 +80,21 @@ def get_all_assignments():
         
     return df
 
-def get_assignment_by_article_id(article_id):
+#def get_assignment_by_article_id(article_id):
     """Consulta la ficha de un artículo por su ID."""
     df = get_all_assignments()
     match = df[df["IdArticulo"] == article_id]
+    return match.iloc[0] if not match.empty else None
+
+def get_assignment_by_article_id(article_id):
+    """Consulta la ficha de un artículo por su ID."""
+    if article_id is None:
+        return None
+    df = get_all_assignments()
+    if df.empty or "IdArticulo" not in df.columns:
+        return None
+    target_id = str(article_id).strip()
+    match = df[df["IdArticulo"].astype(str).str.strip() == target_id]
     return match.iloc[0] if not match.empty else None
 
 def execute_custom_query(sql_query):

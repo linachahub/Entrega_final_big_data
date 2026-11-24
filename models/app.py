@@ -193,6 +193,14 @@ def update_article_detail(selected_id):
     area = rec.get("Area_Evaluador", rec.get("Area_interés", "Sin área especificada"))
     similitud = rec.get("Similitud", rec.get("Similarity_Score", "N/A"))
     reporte = rec.get("LLM_Report", rec.get("LLM_Decision", "Sin justificación registrada."))
+    
+    lineas_reporte = [
+        linea for linea in str(reporte).splitlines()
+        if not linea.strip().upper().startswith("ID_EVALUADOR:")
+        and not linea.strip().upper().startswith("ID EVALUADOR:")
+    ]
+    reporte_limpio = "\n".join(lineas_reporte).strip()
+    
 
     # Formateo si similitud es float
     if isinstance(similitud, (int, float)):
@@ -218,7 +226,7 @@ def update_article_detail(selected_id):
             html.Hr(),
             html.H6("Dictamen y Justificación del Modelo LLM:", className="text-info font-weight-bold"),
             html.Pre(
-                str(reporte), 
+                str(reporte_limpio), 
                 style={
                     "backgroundColor": "#f8f9fa", 
                     "padding": "15px", 
