@@ -42,7 +42,7 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
 - **Capa Silver:** limpieza y estandarización de texto, construcción de descripciones enriquecidas, generación de embeddings con **`nomic-embed-text`** en Ollama y evaluación/re-ranking con **`mistral`** (`models/matcher_pipeline.py` / `matcher.py`).
 - **Capa Gold:** Interfaz web (`models/app.py`): ver el tablero en `http://127.0.0.1:8050/`.
 
-## Flujo de datos
+### Flujo de datos
 
 1. **Fuentes de entrada (`data/`):**
    - `data/summary.xlsx`: artículos candidatos a evaluación (título, palabras clave, etc.).
@@ -54,7 +54,7 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
 4. **Interfaz web (`models/app.py`):**
    - Renderiza el tablero en `http://127.0.0.1:8050/`.
 
-## Estructura del Proyecto
+### Estructura del Proyecto
 
 * `Entrega_final_big_data/`
   * `data/`
@@ -78,7 +78,7 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
   * `uv.lock`
 
 
-# Requisitos previos
+## 4. Requisitos previos
 Python 3.13 y entorno virtual (.venv).
 
 Ollama instalado y en ejecución en el equipo local, con los modelos descargados:
