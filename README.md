@@ -56,7 +56,7 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
 
 ## Estructura del Proyecto
 
-```text
+text
 Entrega_final_big_data/
 ├── data/
 │   ├── summary.xlsx
