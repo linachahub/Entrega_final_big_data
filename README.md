@@ -56,16 +56,16 @@ Diseñar una aplicación de recomendación y priorización de evaluadores basada
 
 ## Estructura del Proyecto
 
-Entrega_final_big_data/
-├── data/
-│   ├── summary.xlsx
-│   └── evaluators.xlsx
-├── models/
-│   ├── app.py
-│   ├── query.py
-│   ├── matcher_pipeline.py
-│   └── editorial_assignments.db
-└── README.md
+* `Entrega_final_big_data/`
+  * `data/`
+    * `summary.xlsx`
+    * `evaluators.xlsx`
+  * `models/`
+    * `app.py`
+    * `query.py`
+    * `matcher_pipeline.py`
+    * `editorial_assignments.db`
+  * `README.md`
 
 
 # Requisitos previos
