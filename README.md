@@ -98,6 +98,6 @@ Abre en el navegador la dirección:
 Plaintext
 [http://127.0.0.1:8050/](http://127.0.0.1:8050/)
 
-![Tabla General de Asignaciones](img/Imagen_1.png)
-![Tabla General de Asignaciones](img/Imagen_2.png)
-![Tabla General de Asignaciones](img/Imagen_3.png)
+![Vista general del tablero de asignación de evaluadores](img/Imagen_1.png)
+![Pestaña de detalle y dictamen del modelo LLM](img/Imagen_2.png)
+![Consola SQLite interactiva con consulta de asignaciones](img/Imagen_3.png)
